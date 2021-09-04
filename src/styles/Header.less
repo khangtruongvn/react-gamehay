@@ -1,0 +1,140 @@
+@import "./varialbles.less";
+.app__header {
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  padding: 0 25px;
+  position: fixed;
+  justify-content: space-between;
+  background-color: @dark-background-color;
+  border-bottom: 1px solid @dark-border-color;
+  .header__group {
+    display: flex;
+    align-items: center;
+  }
+  .header__group--left {
+    padding-right: 25px;
+  }
+  .header__group--right {
+    flex: 1;
+    padding-left: 50px;
+    .header__search-icon {
+      display: none;
+      cursor: pointer;
+      i {
+        font-size: 18px;
+        margin-left: 10px;
+        transition: all 0.3s;
+        color: @dark-text-color;
+      }
+    }
+    .header__search-icon:hover {
+      i {
+        opacity: 0.7;
+      }
+    }
+  }
+  .header__menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: -10px;
+    transition: all 0.3s;
+    .header__menu-icon {
+      margin: auto;
+      font-size: 20px;
+      color: @dark-text-color;
+    }
+  }
+  .header__menu:hover {
+    background-color: @dark-hover-color;
+  }
+  .header__logo {
+    margin-left: 5px;
+    .header__logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 60px;
+      color: @dark-text-color;
+    }
+  }
+  .header__search {
+    width: 550px;
+    height: 42px;
+    overflow: hidden;
+    margin-right: auto;
+    border-radius: 10px;
+    .ant-input-group {
+      height: 100%;
+      .ant-input-group-addon {
+        left: 0;
+        background-color: @dark-search-bg-color;
+        border-left: none;
+        .ant-input-search-button {
+          border: none;
+          background-color: rgba(255, 255, 255, -1.1);
+          color: @dark-text-color !important;
+        }
+      }
+    }
+    .ant-input {
+      height: 100%;
+      border: none;
+      outline: none;
+      color: @dark-text-color;
+      background-color: @dark-search-bg-color;
+    }
+    .ant-input:focus {
+      box-shadow: none;
+    }
+  }
+  .header__swich-theme {
+  }
+}
+
+// Light mode
+.app__header.light {
+  border-color: @light-border-color;
+  background-color: @light-background-color;
+  .header__menu {
+    .header__menu-icon {
+      color: @light-text-color;
+    }
+  }
+  .header__menu:hover {
+    background-color: @light-hover-color;
+  }
+  .header__logo {
+    .header__logo-text {
+      color: @light-text-color;
+    }
+  }
+  .header__group--right {
+    .header__search-icon {
+      i {
+        color: @light-text-color;
+      }
+    }
+  }
+  .header__search {
+    .ant-input-group {
+      .ant-input-group-addon {
+        background-color: @light-search-bg-color;
+        .ant-input-search-button {
+          border: none;
+          background-color: rgba(255, 255, 255, -1.1);
+          color: @light-text-color !important;
+        }
+      }
+    }
+    .ant-input {
+      color: @light-text-color;
+      background-color: @light-search-bg-color;
+    }
+  }
+}

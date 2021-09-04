@@ -1,0 +1,187 @@
+// PC
+@media (min-width: 992px) {
+  .nav-footer {
+    display: none;
+  }
+}
+
+// tablet
+@media (min-width: 576px) and (max-width: 991px) {
+  .app__header {
+    z-index: 0;
+    position: initial;
+    .header__group {
+      .header__search {
+        display: none;
+      }
+      .header__swich-theme {
+        margin-left: auto;
+      }
+    }
+    .header__group--right {
+      padding-left: 0;
+      .header__search-icon {
+        display: block;
+      }
+    }
+  }
+  .app__layout {
+    padding-top: 0;
+    padding-bottom: 62px;
+  }
+  .app__sider {
+    display: none;
+  }
+  .app__content {
+    margin-top: 0;
+    margin-left: 0 !important;
+    .game__hightlight {
+      //   display: none;
+    }
+  }
+  .app__footer {
+    margin-left: 0 !important;
+  }
+
+  //   HOME PAGE
+  .content__homepage {
+    .homepage__gamehot {
+      .gamehot__img {
+        max-width: none;
+      }
+    }
+  }
+  //   DETAILS PAGE
+  .content__detailspage {
+  }
+  .content__tutorialpage {
+    padding: 0;
+  }
+}
+
+// mobile
+@media (max-width: 575px) {
+  .app__header {
+    z-index: 0;
+    position: initial;
+    .header__group {
+      .header__search {
+        display: none;
+      }
+      .header__swich-theme {
+        margin-left: auto;
+      }
+    }
+    .header__group--right {
+      padding-left: 0;
+      .header__search-icon {
+        display: block;
+      }
+    }
+  }
+  .app__layout {
+    padding-top: 0;
+    padding-bottom: 62px;
+  }
+  .app__sider {
+    display: none;
+  }
+  .app__content {
+    margin-top: 0;
+    padding: 20px;
+    margin-left: 0 !important;
+    .game__hightlight {
+      //   display: none;
+    }
+  }
+  .app__footer {
+    margin-left: 0 !important;
+  }
+
+  //   HOME PAGE
+  .content__homepage {
+    .homepage__gamehot {
+      position: relative;
+      padding-bottom: 100px;
+      .gamehot__img {
+        max-width: none;
+      }
+      .gamehot__info {
+        border-radius: 8px;
+        bottom: 30px;
+        padding: 15px;
+        margin: 0 15px;
+        position: absolute;
+        background-color: #252526;
+      }
+    }
+  }
+  .content__homepage.light {
+    .homepage__gamehot {
+      .gamehot__info {
+        background-color: @light-background-color;
+        box-shadow: 0 10px 15px 0 rgb(30 30 30 / 7%);
+      }
+    }
+  }
+  //   DETAILS PAGE
+  .content__detailspage {
+    .details__image-demo {
+      flex-wrap: wrap;
+      margin-top: 32px;
+      .image-demo__item {
+        width: 100%;
+        padding: 8px 0;
+      }
+    }
+    .details__download {
+      width: 100%;
+      .download__src {
+        max-width: 55%;
+      }
+    }
+  }
+
+  .content__tutorialpage {
+    padding: 0;
+    .tutorialpage__heading {
+      font-size: 24px;
+    }
+    .tutorialpage__content {
+      .content__heading {
+        font-size: 22px;
+      }
+      img {
+        padding: 0;
+      }
+    }
+  }
+  // GAMES LIST
+  .game__list {
+    .game__item {
+      width: 50%;
+    }
+  }
+
+  // menu responsive
+  .menu__responsive {
+    .menu__group {
+      width: 80%;
+    }
+  }
+}
+
+// mini phone
+@media (max-width: 330px) {
+  .app__header {
+    z-index: 0;
+    position: initial;
+    .header__group {
+      .header__logo {
+        .header__logo-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

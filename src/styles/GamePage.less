@@ -1,0 +1,39 @@
+@import "./varialbles.less";
+.content__gamespage {
+  width: 100%;
+  .gamespage__breadcrumb {
+    margin-bottom: 16px;
+    color: @dark-text-color;
+    .ant-breadcrumb-link {
+      cursor: pointer;
+      transition: all 0.3s;
+      color: @dark-text-color;
+    }
+    .ant-breadcrumb-separator {
+      color: inherit;
+    }
+    .ant-breadcrumb-link:hover {
+      opacity: 0.7;
+    }
+  }
+  .gamespage__loadmore {
+    display: flex;
+    .ant-btn {
+      margin: 0 auto;
+      background-color: @dark-link-color;
+    }
+  }
+}
+// light mode
+.content__gamespage.light {
+  .gamespage__breadcrumb {
+    color: @light-text-color;
+
+    .ant-breadcrumb-link {
+      color: @light-text-color;
+    }
+    .ant-breadcrumb-separator {
+      color: inherit;
+    }
+  }
+}

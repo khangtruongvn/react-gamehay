@@ -1,0 +1,167 @@
+@import "./varialbles.less";
+.content__detailspage {
+  .details__breadcrumb {
+    margin-bottom: 16px;
+    color: @dark-text-color;
+    .ant-breadcrumb-link {
+      cursor: pointer;
+      transition: all 0.3s;
+      color: @dark-text-color;
+    }
+    .ant-breadcrumb-separator {
+      color: inherit;
+    }
+    .ant-breadcrumb-link:hover {
+      opacity: 0.7;
+    }
+  }
+  .details__name {
+    font-size: 32px;
+    font-weight: 700;
+    color: @dark-text-color;
+  }
+  .details__banner {
+    margin-top: 30px;
+    .details__banner-src {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  .details__title {
+    margin: 46px 0 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: @dark-text-color;
+  }
+  .details__info {
+  }
+  .details__tutorials {
+  }
+  .comment__btn {
+    width: 100%;
+    height: 62px;
+    margin-top: 40px;
+    color: @dark-text-color;
+    background-color: @dark-background-color;
+  }
+}
+.details__image-demo {
+  display: flex;
+  margin: 40px -8px 0;
+  .image-demo__item {
+    padding: 0 8px;
+    width: 33.33333%;
+  }
+  .image-demo__src {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+.details__info {
+  .info__desc {
+    font-size: 16px;
+    color: @dark-text-color;
+  }
+}
+.details__tutorials {
+  .tutorials {
+    font-size: 16px;
+    color: @dark-text-color;
+  }
+}
+.details__download {
+  width: 500px;
+  height: 80px;
+  margin: 20px 0;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #252526;
+  border: 1px solid @dark-border-color;
+  .download__file {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    min-width: 50px;
+    font-size: 18px;
+    margin: 0 16px;
+    border-radius: 10px;
+    align-items: center;
+    color: @dark-text-color;
+    justify-content: center;
+    background-color: @dark-background-color;
+  }
+  .download__src {
+    max-width: 65%;
+    font-size: 14px;
+    height: 22px;
+    overflow: hidden;
+    margin-right: auto;
+    color: @dark-text-color;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: horizontal;
+  }
+  .download__btn {
+    cursor: pointer;
+    margin-right: 16px;
+    border-radius: 10px;
+    background-color: @dark-link-color;
+    .download__btn-icon {
+      font-size: 18px;
+      padding: 16px;
+      color: @dark-text-color;
+    }
+  }
+}
+
+// light mode
+.content__detailspage.light {
+  .details__breadcrumb {
+    color: @light-text-color;
+    .ant-breadcrumb-link {
+      color: @light-text-color;
+    }
+  }
+  .details__name {
+    color: @light-text-color;
+  }
+
+  .details__title {
+    color: @light-text-color;
+  }
+  .comment__btn {
+    color: @light-text-color;
+    background-color: @light-background-color;
+  }
+  .details__info {
+    .info__desc {
+      color: @light-text-color;
+    }
+  }
+  .details__tutorials {
+    .tutorials {
+      color: @light-text-color;
+    }
+  }
+  .details__download {
+    background-color: #fefefe;
+    border-color: @light-border-color;
+    box-shadow: 0 10px 8px -8px rgb(0 0 0 / 12%);
+    .download__file {
+      color: @light-text-color;
+      background-color: #f1f1f0;
+    }
+    .download__src {
+      color: @light-text-color;
+    }
+    .download__btn {
+      background-color: @light-link-color;
+      .download__btn-icon {
+        color: @dark-text-color;
+      }
+    }
+  }
+}

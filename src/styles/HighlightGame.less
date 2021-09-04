@@ -1,0 +1,102 @@
+@import "./varialbles.less";
+.game__hightlight {
+  .homepage__title {
+    font-size: 15px;
+    position: relative;
+    margin-bottom: 30px;
+    color: @dark-text-color;
+  }
+  .homepage__title::after {
+    left: 0;
+    content: "";
+    width: 18px;
+    bottom: -8px;
+    position: absolute;
+    border-bottom: 1px solid @dark-text-color;
+  }
+  .hightlight__banner {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    .hightlight__banner-src {
+      width: 100%;
+      transform: scale(1.1);
+    }
+  }
+  .hightligh__list {
+    padding-left: 0;
+    list-style-type: none;
+    .hightlight__item {
+      display: flex;
+      width: 100%;
+      margin: 20px 0;
+      justify-content: space-between;
+      align-items: center;
+      color: @dark-text-color;
+      .number {
+        font-size: 22px;
+        font-weight: 700;
+        color: @dark-hover-color;
+      }
+      div {
+        margin-right: auto;
+        margin-left: 12px;
+      }
+      .category {
+        color: #bababa;
+        font-size: 14px;
+        margin-bottom: 0;
+        .category__link {
+          padding-left: 4px;
+          color: @dark-text-color;
+        }
+        .category__link:hover {
+          color: @dark-link-color;
+        }
+      }
+      .name {
+        color: inherit;
+        font-size: 15px;
+        font-weight: 700;
+        transition: all 0.3s;
+      }
+      .name:hover {
+        opacity: 0.7;
+      }
+      .icon {
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .icon:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+// light mode
+.game__hightlight.light {
+  .homepage__title {
+    color: @light-text-color;
+  }
+  .homepage__title::after {
+    border-color: @light-text-color;
+  }
+  .hightligh__list {
+    .hightlight__item {
+      color: @light-text-color;
+      .number {
+        color: #c8cbce
+      }
+      .category {
+        color: #bababa;
+        .category__link {
+          color: @light-text-color;
+        }
+        .category__link:hover {
+          color: @light-link-color;
+        }
+      }
+    }
+  }
+}

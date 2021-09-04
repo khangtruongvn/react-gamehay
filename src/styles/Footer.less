@@ -1,0 +1,38 @@
+@import "./varialbles.less";
+.app__footer {
+  display: flex;
+  padding: 20px;
+  height: initial;
+  justify-content: space-between;
+  transition: all 0.2s;
+  background-color: @dark-background-color;
+  .footer__copyright {
+    color: @dark-text-color;
+    .footer__copyright-link {
+      color: @dark-link-color;
+    }
+  }
+  .footer__scrolltop {
+    opacity: 0.7;
+    cursor: pointer;
+    color: @dark-text-color;
+    .footer__scrolltop-icon {
+      padding: 8px;
+    }
+  }
+}
+// light mode
+.app__footer.light{
+  background-color: @light-background-color;
+  .footer__copyright {
+    color: @light-text-color;
+    .footer__copyright-link {
+      color: @light-link-color;
+    }
+  }
+  .footer__scrolltop {
+    color: @light-text-color;
+    .footer__scrolltop-icon {
+    }
+  }
+}

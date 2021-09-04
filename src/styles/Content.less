@@ -1,0 +1,15 @@
+@import "./varialbles.less";
+.app__layout {
+  min-height: 100vh;
+  padding-top: 60px;
+  position: relative;
+}
+.app__content {
+  padding: 25px;
+  height: calc(100% - 70px);
+  transition: all 0.2s;
+  background-color: @dark-background-color;
+}
+.app__content.light {
+  background-color: @light-background-color;
+}

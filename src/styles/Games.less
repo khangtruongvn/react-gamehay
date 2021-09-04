@@ -1,0 +1,91 @@
+@import "./varialbles.less";
+
+.game__list {
+  margin: 20px -10px;
+  .game__item {
+    padding: 0 10px;
+    width: 33.33333%;
+    margin-bottom: 40px;
+  }
+}
+.game__item {
+  color: @dark-text-color;
+  .game__img {
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all 0.3s;
+    .game__img-src {
+      width: 100%;
+      padding-top: 65%;
+      background: center/cover no-repeat;
+    }
+  }
+  .game__img:hover {
+    opacity: 0.7;
+  }
+  .game__info {
+    padding-top: 20px;
+    .game__info-category {
+      color: #bababa;
+      margin-bottom: 8px;
+      .game__info-category-link {
+        padding-left: 4px;
+        color: @dark-text-color;
+      }
+      .game__info-category-link:hover {
+        color: @dark-link-color;
+      }
+    }
+    .game__info-name {
+      color: inherit;
+      font-size: 15px;
+      height: 46px;
+      font-weight: 700;
+      transition: all 0.3s;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .game__info-name:hover {
+      opacity: 0.7;
+    }
+    .game__info-desc {
+      margin-top: 4px;
+      height: 88px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+    .game__info-create {
+      margin-top: 20px;
+      color: #bababa;
+      cursor: default;
+      user-select: none;
+    }
+  }
+}
+
+// light mode
+.game__list.light {
+  .game__item {
+    color: @light-text-color;
+    .game__info {
+      .game__info-category {
+        color: #bababa;
+        .game__info-category-link {
+          color: @light-text-color;
+        }
+        .game__info-category-link:hover {
+          color: @light-link-color;
+        }
+      }
+      .game__info-create {
+        color: #bababa;
+      }
+    }
+  }
+}

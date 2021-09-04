@@ -1,0 +1,315 @@
+@import "./varialbles.less";
+
+.menu__responsive {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  .overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+  }
+  .menu__group {
+    z-index: 1;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    transition: all 0.3s;
+    animation: fadeIn ease-in 0.3s;
+    background-color: @dark-background-color;
+    border-right: 1px solid @dark-border-color;
+  }
+  .menu__heading {
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    position: fixed;
+    transition: all 0.3s;
+    color: @dark-text-color;
+    background-color: @dark-background-color;
+    div {
+      align-items: center;
+      display: inline-flex;
+      padding: 20px 24px 30px;
+      i {
+        font-size: 16px;
+      }
+      p {
+        padding-left: 18px;
+        font-family: "Noto Sans";
+      }
+    }
+    .div:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .menu {
+    height: 100%;
+    border: none;
+    margin-top: 70px;
+    overflow-y: scroll;
+
+    background-color: @dark-background-color;
+    .menu__sub-menu {
+      .menu__item-icon {
+        font-size: 16px;
+        padding-right: 7px;
+        color: @dark-text-color;
+      }
+      .ant-menu-submenu-arrow {
+        color: @dark-text-color;
+      }
+    }
+
+    .menu__item {
+      span {
+        color: @dark-text-color;
+      }
+
+      .menu__item-icon {
+        font-size: 16px;
+        color: @dark-text-color;
+        padding-right: 17px;
+      }
+    }
+    .menu__sub-menu:hover,
+    .menu__item:hover,
+    .menu__item.ant-menu-item-selected {
+      background-color: @dark-hover-color;
+    }
+    .ant-menu-submenu {
+      .menu__item {
+        a {
+          color: @dark-text-color;
+        }
+      }
+      span {
+        color: @dark-text-color;
+      }
+      .ant-menu {
+        background-color: @dark-background-color;
+        span {
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+  .footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    transition: all 0.3s;
+    padding: 20px 20px 30px;
+    animation: fadeIn ease-in 0.3s;
+    background-color: @dark-background-color;
+    .sider__footer-item {
+      padding: 8px;
+      i {
+        font-size: 22px;
+        color: @dark-text-color;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+// Light mode
+.menu__responsive.light {
+  .overlay {
+    filter: brightness(70%);
+  }
+  .menu__group {
+    background-color: @light-background-color;
+    border-right: 1px solid @light-border-color;
+  }
+  .menu__heading {
+    color: @light-text-color;
+    background-color: @light-background-color;
+  }
+  .menu {
+    background-color: @light-background-color;
+    .menu__sub-menu {
+      .menu__item-icon {
+        color: @light-text-color;
+      }
+      .ant-menu-submenu-arrow {
+        color: @light-text-color;
+      }
+    }
+
+    .menu__item {
+      span {
+        color: @light-text-color;
+      }
+      .menu__item-icon {
+        font-size: 16px;
+        color: @light-text-color;
+        padding-right: 17px;
+      }
+    }
+    .menu__sub-menu:hover,
+    .menu__item:hover,
+    .menu__item.ant-menu-item-selected {
+      background-color: @light-hover-color;
+    }
+    .ant-menu-submenu {
+      .menu__item {
+        a {
+          color: @light-text-color;
+        }
+      }
+      span {
+        color: @light-text-color;
+      }
+      .ant-menu {
+        background-color: @light-background-color;
+        span {
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+  .footer {
+    background-color: @light-background-color;
+    .sider__footer-item {
+      i {
+        color: @light-text-color;
+      }
+    }
+  }
+}
+
+// search bar
+.searchbar__responsive {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  .overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+  }
+  .searchbar {
+    z-index: 2;
+    left: 0px;
+    right: 0px;
+    top: 20px;
+    height: 50px;
+    margin: auto;
+    padding: 0 20px;
+    position: absolute;
+    transition: all 0.3s;
+    transform: translateY(-100%);
+    animation: fadeDown ease-in 0.3s;
+    .ant-input-group {
+      height: 100%;
+      .ant-input-affix-wrapper {
+        padding: 0;
+        height: 100%;
+        border: none;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        box-shadow: none;
+        .ant-input-suffix {
+          margin: 0;
+          padding: 0 4px;
+          background-color: @dark-search-bg-color;
+          .ant-input-clear-icon {
+            font-size: 16px;
+            color: @dark-text-color;
+          }
+        }
+      }
+      .ant-input-group-addon {
+        left: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: @dark-search-bg-color;
+        border-left: none;
+        .ant-input-search-button {
+          border: none;
+          background-color: rgba(255, 255, 255, -1.1);
+          color: @dark-text-color !important;
+        }
+      }
+    }
+    .ant-input {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      padding-left: 20px;
+      height: 100%;
+      border: none;
+      outline: none;
+      color: @dark-text-color;
+      background-color: @dark-search-bg-color;
+    }
+    .ant-input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+// lightmode
+.searchbar__responsive.light {
+  .overlay {
+    filter: brightness(70%);
+  }
+  .searchbar {
+    .ant-input-group {
+      .ant-input-affix-wrapper {
+        .ant-input-suffix {
+          background-color: @light-search-bg-color;
+          .ant-input-clear-icon {
+            color: @light-text-color;
+          }
+        }
+      }
+      .ant-input-group-addon {
+        background-color: @light-search-bg-color;
+        .ant-input-search-button {
+          color: @light-text-color !important;
+        }
+      }
+    }
+    .ant-input {
+      color: @light-text-color;
+      background-color: @light-search-bg-color;
+    }
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

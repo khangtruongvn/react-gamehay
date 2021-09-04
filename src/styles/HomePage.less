@@ -1,0 +1,117 @@
+@import "./varialbles.less";
+.content__homepage {
+  margin: 0 -15px;
+  .ant-col {
+    padding: 0 15px;
+  }
+  .homepage__title {
+    font-size: 15px;
+    position: relative;
+    margin-bottom: 30px;
+    color: @dark-text-color;
+  }
+  .homepage__title::after {
+    left: 0;
+    content: "";
+    width: 18px;
+    bottom: -8px;
+    position: absolute;
+    border-bottom: 1px solid @dark-text-color;
+  }
+  .homepage__gamehot {
+    display: flex;
+  }
+  .game__hightlight {
+    display: flex;
+    flex-direction: column;
+  }
+  .homepage__loadmore {
+    display: flex;
+    .ant-btn {
+      margin: 0 auto;
+      background-color: @dark-link-color;
+    }
+  }
+}
+
+.homepage__gamehot {
+  padding-bottom: 30px;
+  border-bottom: 1px solid @dark-border-color;
+  .gamehot__img {
+    max-width: 310px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 4px;
+    .gamehot__img-src {
+      width: 100%;
+      transform: scale(1.1);
+    }
+  }
+  .gamehot__img:hover{
+    opacity: 0.7;
+  }
+  .gamehot__info {
+    padding-left: 24px;
+  }
+  .gamehot__category {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: @dark-text-color;
+    .gamehot__category-link {
+      transition: all 0.3s;
+      padding-left: 4px;
+      color: @dark-text-color;
+    }
+    .gamehot__category-link:hover {
+      color: @dark-link-color;
+    }
+  }
+  .gamehot__name {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    transition: all 0.3s;
+    color: @dark-text-color;
+  }
+  .gamehot__name:hover {
+    opacity: 0.7;
+  }
+  .gamehot__desc {
+    height: 66px;
+    margin-top: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    color: @dark-text-color;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// light mode
+.content__homepage.light {
+  .homepage__title {
+    color: @light-text-color;
+  }
+  .homepage__title::after {
+    border-color: @light-text-color;
+  }
+  .homepage__gamehot {
+    border-color: @light-border-color;
+    .gamehot__category {
+      color: @light-text-color;
+      .gamehot__category-link {
+        color: @light-text-color;
+      }
+      .gamehot__category-link:hover {
+        color: @light-link-color;
+      }
+    }
+    .gamehot__name {
+      color: @light-text-color;
+    }
+    .gamehot__desc {
+      color: @light-text-color;
+    }
+  }
+}

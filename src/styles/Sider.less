@@ -1,0 +1,146 @@
+@import "./varialbles.less";
+.app__sider {
+  z-index: 1;
+  position: fixed;
+  overflow-y: scroll;
+  height: calc(100vh - 60px);
+  border-right: 1px solid @dark-border-color;
+  background-color: @dark-background-color;
+  .sider__menu {
+    border: none;
+    margin-top: 10px;
+    transition: all 0.3s;
+    background-color: @dark-background-color;
+    .menu__sub-menu {
+      .menu__item-icon {
+        font-size: 16px;
+        padding-right: 7px;
+        color: @dark-text-color;
+      }
+      .ant-menu-submenu-arrow {
+        color: @dark-text-color;
+      }
+    }
+
+    .menu__item {
+      span {
+        color: @dark-text-color;
+      }
+
+      .menu__item-icon {
+        font-size: 16px;
+        color: @dark-text-color;
+        padding-right: 17px;
+      }
+    }
+    .menu__sub-menu:hover,
+    .menu__item:hover,
+    .menu__item.ant-menu-item-selected {
+      background-color: @dark-hover-color;
+    }
+    .ant-menu-submenu {
+      .menu__item {
+        a {
+          color: @dark-text-color;
+        }
+      }
+      span {
+        color: @dark-text-color;
+      }
+      .ant-menu {
+        background-color: @dark-background-color;
+        span {
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+  .sider__line {
+    margin: 8px 16px;
+    border-bottom: 1px solid @dark-border-color;
+  }
+  .sider__footer {
+    left: 0;
+    bottom: 0;
+    width: 259px;
+    position: fixed;
+    padding: 20px 20px 30px;
+    transition: all 0.3s;
+    animation: fadeIn ease-in 0.3s;
+    background-color: @dark-background-color;
+    .sider__footer-item {
+      padding: 8px;
+      i {
+        font-size: 16px;
+        color: @dark-text-color;
+      }
+    }
+  }
+}
+
+// light mode
+.app__sider.light {
+  border-color: @light-border-color;
+  background-color: @light-background-color;
+  .sider__menu {
+    background-color: @light-background-color;
+    .menu__sub-menu {
+      .menu__item-icon {
+        color: @light-text-color;
+      }
+      .ant-menu-submenu-arrow {
+        color: @light-text-color;
+      }
+    }
+
+    .menu__item {
+      span {
+        color: @light-text-color;
+      }
+
+      .menu__item-icon {
+        color: @light-text-color;
+      }
+    }
+    .menu__sub-menu:hover,
+    .menu__item:hover,
+    .menu__item.ant-menu-item-selected {
+      background-color: @light-hover-color;
+    }
+    .ant-menu-submenu {
+      .menu__item {
+        a {
+          color: @light-text-color;
+        }
+      }
+      span {
+        color: @light-text-color;
+      }
+      .ant-menu {
+        background-color: @light-background-color;
+        span {
+          color: #7a7a7a;
+        }
+      }
+    }
+  }
+  .sider__line {
+    border-color: @light-border-color;
+  }
+  .sider__footer {
+    background-color: @light-background-color;
+    .sider__footer-item {
+      i {
+        color: @light-text-color;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,91 @@
+@import "./varialbles.less";
+
+.content__tutorialpage {
+  flex-direction: column;
+  padding: 0 93px;
+  .tutorialpage__breadcrumb {
+    color: @dark-text-color;
+    .ant-breadcrumb-link {
+      cursor: pointer;
+      transition: all 0.3s;
+      color: @dark-text-color;
+    }
+    .ant-breadcrumb-separator {
+      color: @dark-text-color;
+    }
+    .ant-breadcrumb-link:hover {
+      opacity: 0.7;
+    }
+  }
+  .tutorialpage__heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: @dark-text-color;
+  }
+  .tutorialpage__content {
+  }
+}
+
+.tutorialpage__content {
+  margin-top: 46px;
+  display: inline-flex;
+  flex-direction: column;
+  .content__heading {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: @dark-text-color;
+  }
+  .link__group {
+    a {
+      color: @dark-link-color;
+      margin-left: 10px;
+    }
+  }
+  p {
+    font-size: 15px;
+    line-height: 26px;
+    color: @dark-text-color;
+  }
+  img {
+    width: 100%;
+    padding: 0 70px;
+    margin-bottom: 26px;
+  }
+  .link {
+    color: @dark-text-color;
+  }
+}
+
+// light mode
+
+.content__tutorialpage.light {
+  .tutorialpage__breadcrumb {
+    color: @light-text-color;
+    .ant-breadcrumb-link {
+      color: @light-text-color;
+    }
+    .ant-breadcrumb-separator {
+      color: @light-text-color;
+    }
+  }
+  .tutorialpage__heading {
+    color: @light-text-color;
+  }
+  .tutorialpage__content {
+    .content__heading {
+      color: @light-text-color;
+    }
+    .link__group {
+      a {
+        color: @light-link-color;
+      }
+    }
+    p {
+      color: @light-text-color;
+    }
+    .link {
+      color: @light-text-color;
+    }
+  }
+}
