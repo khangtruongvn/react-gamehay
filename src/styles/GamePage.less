@@ -1,6 +1,21 @@
 @import "./varialbles.less";
 .content__gamespage {
   width: 100%;
+  .gamespage__heading {
+    display: flex;
+    justify-content: space-between;
+    .changeform__btn {
+      margin-top: -4px;
+      cursor: pointer;
+      -webkit-user-select: none;
+      color: @dark-text-color;
+      .changeform__icon {
+        padding: 6px;
+        font-size: 16px;
+        color: @dark-text-color;
+      }
+    }
+  }
   .gamespage__breadcrumb {
     margin-bottom: 16px;
     color: @dark-text-color;
@@ -34,6 +49,14 @@
     }
     .ant-breadcrumb-separator {
       color: inherit;
+    }
+  }
+  .gamespage__heading {
+    .changeform__btn {
+      color: @light-text-color;
+      .changeform__icon {
+        color: @light-text-color;
+      }
     }
   }
 }

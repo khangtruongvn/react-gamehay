@@ -1,23 +1,25 @@
 import { Breadcrumb, Button, Col, Row } from "antd";
-import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import gamesApi from "../../../../apis/gamesApi";
+import { changeForm } from "../../../../slices/formSlice";
 import { transToUp } from "../../../../utils/transToUp";
 import GameList from "../../../common/Games/GameList";
 
 const GamePage = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
   const [games, setGames] = useState([]);
   const { category_code } = useParams();
   const [totalRows, setTotalRows] = useState(0);
-  const prevCategoryCode = useRef(category_code);
   const [currentPage, setCurrentPage] = useState(1);
   const theme = useSelector((state) => state.theme);
+  const formMode = useSelector((state) => state.form);
 
   useEffect(() => {
-    prevCategoryCode.current = category_code;
     setCurrentPage(1);
+    window.scrollTo(0, 0);
   }, [category_code]);
 
   useEffect(() => {
@@ -43,15 +45,33 @@ const GamePage = () => {
     return fetchGames();
   }, [category_code, currentPage]);
 
+  const handleChangeForm = () => {
+    if (formMode === "grid") {
+      dispatch(changeForm("list"));
+    } else {
+      dispatch(changeForm("grid"));
+    }
+  };
   return (
     <Row className={`content__gamespage ${theme}`}>
       <Col lg={{ span: 16 }} sm={{ span: 24 }}>
-        <Breadcrumb className="gamespage__breadcrumb">
-          <Breadcrumb.Item onClick={() => history.push("/")}>
-            Trang chủ
-          </Breadcrumb.Item>
-          <Breadcrumb.Item>{transToUp(category_code)}</Breadcrumb.Item>
-        </Breadcrumb>
+        <div className="gamespage__heading">
+          <Breadcrumb className="gamespage__breadcrumb">
+            <Breadcrumb.Item onClick={() => history.push("/")}>
+              Trang chủ
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>{transToUp(category_code)}</Breadcrumb.Item>
+          </Breadcrumb>
+          <div className="changeform__btn" onClick={handleChangeForm}>
+            {formMode === "grid" ? "List" : "Grid"}
+            <i
+              className={`changeform__icon ${
+                formMode === "grid" ? "fas fa-list" : "fas fa-th"
+              }`}
+            ></i>
+          </div>
+        </div>
+
         <GameList games={games} />
         <div className="gamespage__loadmore">
           <Button

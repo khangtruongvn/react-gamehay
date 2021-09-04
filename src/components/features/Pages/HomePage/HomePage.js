@@ -1,19 +1,22 @@
 import { Button, Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import gamesApi from "../../../../apis/gamesApi";
 import { randomNumber } from "../../../../utils/randomNumber";
 import GameList from "../../../common/Games/GameList";
 import HighLightGame from "../../../common/HightLight/HightlightGame";
 import HomePageTop from "./components/HomePageTop";
-
+import { changeForm } from "../../../../slices/formSlice";
 const HomePage = () => {
+  const dispatch = useDispatch();
   const [games, setGames] = useState([]);
   const [totalRows, setTotalRows] = useState(null);
   const [gameRandom, setGameRandom] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const theme = useSelector((state) => state.theme);
+  const formMode = useSelector((state) => state.form);
 
+  
   useEffect(() => {
     const params = {
       _page: currentPage,
@@ -45,10 +48,30 @@ const HomePage = () => {
     return fetchGame();
   }, [totalRows]);
 
+  const handleChangeForm = () => {
+    if (formMode === "grid") {
+      dispatch(changeForm("list"));
+    } else {
+      dispatch(changeForm("grid"));
+    }
+  };
+
   return (
     <Row className={`content__homepage ${theme}`}>
       <Col lg={{ span: 16 }} sm={{ span: 24 }}>
         <HomePageTop gameRandom={gameRandom} />
+        <div className="homepage__heading">
+          <h3 className="homepage__title">Bài đăng mới nhất</h3>
+          <div className="changeform__btn" onClick={handleChangeForm}>
+            {formMode === "grid" ? "List" : "Grid"}
+            <i
+              className={`changeform__icon ${
+                formMode === "grid" ? "fas fa-list" : "fas fa-th"
+              }`}
+            ></i>
+          </div>
+        </div>
+
         <GameList games={games} />
         <div className="homepage__loadmore">
           <Button

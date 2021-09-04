@@ -5,7 +5,6 @@ const GameItem = (props) => {
   const { game } = props;
   const history = useHistory();
   const { id, category_code, image, name, info } = game;
-
   const handleToCategory = (code) => {
     history.push(`/games/${code}`);
   };

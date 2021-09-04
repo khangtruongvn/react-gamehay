@@ -7,6 +7,7 @@ const SearchbarResponsive = (props) => {
 
   const handleOnSearch = (keyword) => {
     setVisibleSearchbar(false);
+    if (!keyword) return;
     history.push(`/search/${keyword}`);
   };
 

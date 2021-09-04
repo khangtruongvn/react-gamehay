@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 const GameHightLightItem = ({ game, index }) => {
   const history = useHistory();
   const { name, category_code, id } = game;
+
   return (
     <li className="hightlight__item">
       <h1 className="number">{index + 1}</h1>

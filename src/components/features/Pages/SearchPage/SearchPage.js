@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 const SearchPage = () => {
   const { keyword } = useParams();
   const [games, setGames] = useState([]);
+  const formMode = useSelector((state) => state.form);
   const theme = useSelector((state) => state.theme);
   useEffect(() => {
     const params = {
@@ -24,8 +25,8 @@ const SearchPage = () => {
   }, [keyword]);
 
   return (
-    <Row className={`content__searchpage ${theme}`}>
-      <Col lg={{ span: 16 }} sm={{ span: 24 }}>
+    <Row className={`content__searchpage ${theme} ${formMode} `}>
+      <Col lg={{ span: 16 }} sm={{ span: 24 }} className="searchpage__col">
         <div className="searchpage__message">
           <p>
             Tìm kiếm: <span>{keyword}</span>

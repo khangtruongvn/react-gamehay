@@ -30,6 +30,7 @@ const MenuResponsive = (props) => {
   };
 
   const handleOnSelectMenu = (item) => {
+    handleCloseMenu();
     if (
       item.key === "home" ||
       item.key === "howtodown" ||
@@ -37,7 +38,6 @@ const MenuResponsive = (props) => {
     )
       return history.push(`/${item.key}`);
     history.push(`/games/${item.key}`);
-    handleCloseMenu();
   };
   return (
     <div className={`menu__responsive ${theme}`} ref={menuResponsiveRef}>
@@ -45,7 +45,7 @@ const MenuResponsive = (props) => {
       <div className="menu__group">
         <div className="menu__heading">
           <div onClick={handleCloseMenu}>
-            <i class="fas fa-chevron-left"></i>
+            <i className="fas fa-chevron-left"></i>
             <p>Back</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ const MenuResponsive = (props) => {
             key="sub1"
             title="Thể loại"
             className="menu__sub-menu"
-            icon={<i className="menu__item-icon fas fa-home"></i>}
+            icon={<i className="menu__item-icon fas fa-gamepad"></i>}
           >
             {renderCategories()}
           </Menu.SubMenu>
@@ -68,21 +68,21 @@ const MenuResponsive = (props) => {
           <div className="sider__line"></div>
 
           <Menu.Item className="menu__item" key="request">
-            <i className="menu__item-icon fas fa-home"></i>
+            <i class="menu__item-icon fas fa-info-circle"></i>
             Yêu cầu upload game
           </Menu.Item>
           <div className="sider__line"></div>
 
           <Menu.Item className="menu__item" key="17">
-            <i className="menu__item-icon fas fa-home"></i>
+            <i className="menu__item-icon fas fa-map-signs"></i>
             Sitemap
           </Menu.Item>
           <Menu.Item className="menu__item" key="18">
-            <i className="menu__item-icon fas fa-home"></i>
+            <i class="menu__item-icon fas fa-shield-alt"></i>
             Disclaimers
           </Menu.Item>
           <Menu.Item className="menu__item" key="19">
-            <i className="menu__item-icon fas fa-home"></i>
+            <i className="menu__item-icon fas fa-user-shield"></i>
             Privicy policy
           </Menu.Item>
         </Menu>

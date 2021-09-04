@@ -53,6 +53,9 @@
   }
   //   DETAILS PAGE
   .content__detailspage {
+    .details__navigation {
+      top: 0;
+    }
   }
   .content__tutorialpage {
     padding: 0;
@@ -140,6 +143,9 @@
         max-width: 55%;
       }
     }
+    .details__navigation {
+      top: 0;
+    }
   }
 
   .content__tutorialpage {
@@ -156,10 +162,29 @@
       }
     }
   }
+  .content__searchpage{
+    .searchpage__col{
+      width: 100%;
+    }
+  }
   // GAMES LIST
   .game__list {
     .game__item {
       width: 50%;
+    }
+  }
+  .game__list.list {
+    .game__item {
+      .game__img {
+        flex: 1;
+      }
+      .game__info {
+        flex: 1;
+        padding-top: 0;
+        .game__info-create {
+          display: none;
+        }
+      }
     }
   }
 
@@ -180,6 +205,20 @@
       .header__logo {
         .header__logo-text {
           font-size: 14px;
+        }
+      }
+    }
+  }
+  .game__list.list {
+    .game__item {
+      .game__img {
+        flex: 1;
+      }
+      .game__info {
+        flex: 1;
+        padding-top: 0;
+        .game__info-create {
+          display: none;
         }
       }
     }

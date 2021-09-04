@@ -15,21 +15,21 @@ const NavFooter = (props) => {
       </div>
       <div className="nav-footer__item">
         <i
-          class="nav-footer__icon fas fa-search"
+          className="nav-footer__icon fas fa-search"
           onClick={() => setVisibleSearchbar(true)}
         ></i>
       </div>
       <div className="nav-footer__item">
         <i
-          class="nav-footer__icon fas fa-ellipsis-h"
+          className="nav-footer__icon fas fa-ellipsis-h"
           onClick={() => setVisibleMenu(true)}
         ></i>
       </div>
       <div className="nav-footer__item" onClick={handleChangeTheme}>
-        <i class="nav-footer__icon fas fa-moon"></i>
+        <i className="nav-footer__icon fas fa-moon"></i>
       </div>
       <div className="nav-footer__item">
-        <i class="nav-footer__icon fas fa-cog"></i>
+        <i className="nav-footer__icon fas fa-cog"></i>
       </div>
     </div>
   );

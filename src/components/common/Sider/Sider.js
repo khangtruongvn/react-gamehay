@@ -28,6 +28,7 @@ const SiderApp = ({ zoom }) => {
   };
 
   const handleOnSelectMenu = (item) => {
+    window.scrollTo(0, 0);
     if (
       item.key === "home" ||
       item.key === "howtodown" ||
@@ -41,7 +42,6 @@ const SiderApp = ({ zoom }) => {
     console.log(domEvent);
   };
 
-
   return (
     <Layout.Sider className={`app__sider ${theme}`} width={zoom ? 260 : 68}>
       <Menu mode="inline" className="sider__menu" onSelect={handleOnSelectMenu}>
@@ -54,7 +54,7 @@ const SiderApp = ({ zoom }) => {
           className="menu__sub-menu"
           disabled={zoom ? false : true}
           onTitleClick={handleOnTitleClick}
-          icon={<i className="menu__item-icon fas fa-home"></i>}
+          icon={<i className="menu__item-icon fas fa-gamepad"></i>}
         >
           {renderCategories()}
         </Menu.SubMenu>
@@ -65,21 +65,21 @@ const SiderApp = ({ zoom }) => {
         <div className="sider__line"></div>
 
         <Menu.Item className="menu__item" key="request">
-          <i className="menu__item-icon fas fa-home"></i>
+          <i class="menu__item-icon fas fa-info-circle"></i>
           Yêu cầu upload game
         </Menu.Item>
         <div className="sider__line"></div>
 
         <Menu.Item className="menu__item" key="17">
-          <i className="menu__item-icon fas fa-home"></i>
+          <i className="menu__item-icon fas fa-map-signs"></i>
           Sitemap
         </Menu.Item>
         <Menu.Item className="menu__item" key="18">
-          <i className="menu__item-icon fas fa-home"></i>
+          <i class="menu__item-icon fas fa-shield-alt"></i>
           Disclaimers
         </Menu.Item>
         <Menu.Item className="menu__item" key="19">
-          <i className="menu__item-icon fas fa-home"></i>
+          <i className="menu__item-icon fas fa-user-shield"></i>
           Privicy policy
         </Menu.Item>
       </Menu>
