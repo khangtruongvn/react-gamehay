@@ -32,7 +32,9 @@ const SiderApp = ({ zoom }) => {
     if (
       item.key === "home" ||
       item.key === "howtodown" ||
-      item.key === "request"
+      item.key === "request" ||
+      item.key === "user" ||
+      item.key === "sitemap"
     )
       return history.push(`/${item.key}`);
     history.push(`/games/${item.key}`);
@@ -70,7 +72,13 @@ const SiderApp = ({ zoom }) => {
         </Menu.Item>
         <div className="sider__line"></div>
 
-        <Menu.Item className="menu__item" key="17">
+        <Menu.Item className="menu__item" key="user">
+          <i className="menu__item-icon fas fa-user"></i>
+          Tài khoản
+        </Menu.Item>
+        <div className="sider__line"></div>
+
+        <Menu.Item className="menu__item" key="sitemap">
           <i className="menu__item-icon fas fa-map-signs"></i>
           Sitemap
         </Menu.Item>

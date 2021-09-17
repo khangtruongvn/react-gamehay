@@ -3,8 +3,9 @@ import queryString from "query-string";
 
 const axiosClient = axios.create({
   baseURL: process.env.REACT_APP_BASE_URL_API,
+  // baseURL: "http://localhost:8000/api",
   headers: {
-    "content-type": "applycation/json",
+    "Content-Type": "application/json",
   },
   paramsSerializer: (params) => queryString.stringify(params),
 });

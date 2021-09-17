@@ -1,0 +1,36 @@
+@import "./varialbles.less";
+.app__login {
+  height: 100vh;
+  background-color: @dark-background-color;
+  .login__group {
+    margin: auto;
+    width: 450px;
+    .login__heading {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+      color: @dark-text-color;
+    }
+    .form__item {
+      .ant-form-item-label {
+        label {
+          color: @dark-text-color;
+        }
+      }
+      span {
+        color: @dark-text-color;
+      }
+      .ant-input-password-icon {
+        color: @dark-search-bg-color;
+      }
+    }
+    .form__register {
+      text-align: right;
+      color: @dark-text-color;
+      a {
+        padding-right: 8px;
+        color: @dark-link-color;
+      }
+    }
+  }
+}

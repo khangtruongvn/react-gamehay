@@ -1,0 +1,67 @@
+@import "./varialbles.less";
+
+.admin__games {
+  margin: 0 -8px;
+  padding-top: 20px;
+  .game__item {
+    width: 20%;
+    margin: 10px 0;
+    padding: 0 8px;
+    .game__item-group {
+      background-color: @dark-search-bg-color;
+    }
+    .game__img:hover {
+      .game__img-src {
+        transform: scale(1);
+      }
+    }
+    .game__info {
+      padding: 10px;
+    }
+    .game__control {
+      display: flex;
+      padding-bottom: 10px;
+      justify-content: space-around;
+      .control__btn {
+        padding: 10px;
+        cursor: pointer;
+        .control__btn-icon {
+          font-size: 16px;
+          color: @dark-text-color;
+        }
+      }
+    }
+  }
+}
+
+.admin__games.light {
+  margin: 0 -8px;
+  padding-top: 20px;
+  .game__item {
+    width: 20%;
+    padding: 0 8px;
+    .game__img {
+    }
+    .game__img:hover {
+      .game__img-src {
+        transform: scale(1);
+      }
+    }
+
+    .game__info {
+    }
+    .game__info-category {
+      color: @light-text-color;
+    }
+    .game__info-category-link {
+      color: @light-text-color;
+    }
+    .game__info-name {
+      color: @light-text-color;
+    }
+    .game__info-desc {
+    }
+    .game__info-create {
+    }
+  }
+}

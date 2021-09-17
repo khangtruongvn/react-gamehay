@@ -34,7 +34,8 @@ const MenuResponsive = (props) => {
     if (
       item.key === "home" ||
       item.key === "howtodown" ||
-      item.key === "request"
+      item.key === "request" ||
+      item.key === "user"
     )
       return history.push(`/${item.key}`);
     history.push(`/games/${item.key}`);
@@ -72,6 +73,11 @@ const MenuResponsive = (props) => {
             Yêu cầu upload game
           </Menu.Item>
           <div className="sider__line"></div>
+
+          <Menu.Item className="menu__item" key="user">
+            <i className="menu__item-icon fas fa-user"></i>
+            Tài khoản
+          </Menu.Item>
 
           <Menu.Item className="menu__item" key="17">
             <i className="menu__item-icon fas fa-map-signs"></i>

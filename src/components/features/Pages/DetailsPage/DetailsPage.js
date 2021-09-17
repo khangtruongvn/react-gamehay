@@ -1,24 +1,27 @@
-import { Breadcrumb, Button, Col, Row, Spin } from "antd";
+import { Breadcrumb, Button, Col, Row } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
-import { useParams, useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import gamesApi from "../../../../apis/gamesApi";
 import { transToUp } from "../../../../utils/transToUp";
 import HighlighGame from "../../../common/HightLight/HightlightGame";
+import Comments from "./components/Comments";
+
 const DetailsPage = () => {
   const { id } = useParams();
   const history = useHistory();
-  const [game, setGame] = useState({});
   const navigationRef = useRef(null);
-  const [visibleNaviga, setVisibleNaviga] = useState(false);
+  const [game, setGame] = useState({});
   const theme = useSelector((state) => state.theme);
+  const [visibleNaviga, setVisibleNaviga] = useState(false);
+  const [visileComments, setVisibleComments] = useState(false);
   const { name, image, info, tutorials, category_code, link, image_demo } =
     game;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   useEffect(() => {
     const fetchDetailsGame = async () => {
       try {
@@ -101,7 +104,12 @@ const DetailsPage = () => {
           </p>
         </div>
         <div className="details__tutorials">{renderTutorials()}</div>
-        <Button className="comment__btn">Đăng nhập xét</Button>
+        <Button
+          className="comment__btn"
+          onClick={() => setVisibleComments(true)}
+        >
+          Đăng nhập xét
+        </Button>
       </Col>
       <Col lg={{ span: 8 }} sm={{ span: 24 }}>
         <HighlighGame />
@@ -126,6 +134,12 @@ const DetailsPage = () => {
           2. Tải game
         </a>
       </Col>
+      <Comments
+        theme={theme}
+        gameId={Number(id)}
+        visileComments={visileComments}
+        setVisibleComments={setVisibleComments}
+      />
     </Row>
   );
 };

@@ -94,6 +94,21 @@
     }
   }
   .header__swich-theme {
+    margin-right: 4px;
+  }
+  .header__login {
+    padding: 0 6px;
+    cursor: pointer;
+    color: @dark-text-color;
+  }
+  .header__user {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    .header__user-icon {
+      font-size: 18px;
+      color: @dark-text-color;
+    }
   }
 }
 
@@ -135,6 +150,14 @@
     .ant-input {
       color: @light-text-color;
       background-color: @light-search-bg-color;
+    }
+  }
+  .header__login {
+    color: @light-text-color;
+  }
+  .header__user {
+    .header__user-icon {
+      color: @light-text-color;
     }
   }
 }

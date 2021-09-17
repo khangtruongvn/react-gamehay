@@ -1,6 +1,8 @@
 import { Input, Layout, Switch } from "antd";
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
+import { checkEmptyObject } from "../../../utils/checkEmptyObject";
 const HeaderApp = (props) => {
   const history = useHistory();
   const {
@@ -10,7 +12,7 @@ const HeaderApp = (props) => {
     handleChangeTheme,
     setVisibleSearchbar,
   } = props;
-
+  const currentUser = useSelector((state) => state.user.data);
   const handleOnSearch = (keyword) => {
     history.push(`/search/${keyword}`);
   };
@@ -39,6 +41,22 @@ const HeaderApp = (props) => {
           onChange={handleChangeTheme}
           checked={theme === "light" ? true : false}
         />
+        <div
+          className="header__login"
+          style={{ display: checkEmptyObject(currentUser) ? "block" : "none" }}
+          onClick={() => history.push("/login")}
+        >
+          <p>Đăng nhập</p>
+        </div>
+        <div
+          className="header__login"
+          style={{ display: checkEmptyObject(currentUser) ? "none" : "block" }}
+        >
+          <p>{checkEmptyObject(currentUser) ? "" : currentUser.username}</p>
+        </div>
+        <div className="header__user" onClick={() => history.push("/user")}>
+          <i className="header__user-icon fas fa-user"></i>
+        </div>
         <div
           className="header__search-icon"
           onClick={() => setVisibleSearchbar(true)}

@@ -39,7 +39,12 @@ const TutorialPage = () => {
             Tại đây
           </a>
         </p>
-        <img src="https://1.bp.blogspot.com/-9b0rhwfropg/YQaBATv5o8I/AAAAAAAAAQ4/5rBbn47rLNckagT7AoEi5adt7zCzjrpFQCLcBGAsYHQ/w640-h301/1.png" />
+        <a
+          target="_blank"
+          href="https://1.bp.blogspot.com/-9b0rhwfropg/YQaBATv5o8I/AAAAAAAAAQ4/5rBbn47rLNckagT7AoEi5adt7zCzjrpFQCLcBGAsYHQ/s1920/1.png"
+        >
+          <img src="https://1.bp.blogspot.com/-9b0rhwfropg/YQaBATv5o8I/AAAAAAAAAQ4/5rBbn47rLNckagT7AoEi5adt7zCzjrpFQCLcBGAsYHQ/s1920/1.png" />
+        </a>
         <p>
           Bước 2: Tìm game sau đó "bấm vào nút copy" ở mục tải game để copy mã.
         </p>
@@ -47,13 +52,28 @@ const TutorialPage = () => {
           Bước 3: Nhấn vào biểu tượng extension vừa cài đặt ở bước 1 để hiển thị
           tiện ích.
         </p>
-        <img src="https://1.bp.blogspot.com/-zLMmgEEzLxg/YQaC3P40eBI/AAAAAAAAARA/xFyjERXKNoYKiPI7UDJ6xbLFPs8r_v-tACLcBGAsYHQ/w640-h344/2.png" />
+        <a
+          target="_blank"
+          href="https://1.bp.blogspot.com/-zLMmgEEzLxg/YQaC3P40eBI/AAAAAAAAARA/xFyjERXKNoYKiPI7UDJ6xbLFPs8r_v-tACLcBGAsYHQ/s1920/2.png"
+        >
+          <img src="https://1.bp.blogspot.com/-zLMmgEEzLxg/YQaC3P40eBI/AAAAAAAAARA/xFyjERXKNoYKiPI7UDJ6xbLFPs8r_v-tACLcBGAsYHQ/s1920/2.png" />
+        </a>
         <p>Bước 4: Bấm vào nút "Paste Code" để dán mã lên form.</p>
         <p>Bước 5: Bấm vào nút "Start Decode" để giải mã đoạn mã trên.</p>
         <p>Bước 6: Bấm vào nút "Go Link" để đi đến link tải game.</p>
-        <img src="https://1.bp.blogspot.com/-jIBR8q9rnhM/YQaDx8ZLbmI/AAAAAAAAARI/54_tdqMJ2EQTk1xkqLpnShO2VOWXFYO_QCLcBGAsYHQ/w640-h344/3.png" />
+        <a
+          target="_blank"
+          href="https://1.bp.blogspot.com/-jIBR8q9rnhM/YQaDx8ZLbmI/AAAAAAAAARI/54_tdqMJ2EQTk1xkqLpnShO2VOWXFYO_QCLcBGAsYHQ/s1920/3.png"
+        >
+          <img src="https://1.bp.blogspot.com/-jIBR8q9rnhM/YQaDx8ZLbmI/AAAAAAAAARI/54_tdqMJ2EQTk1xkqLpnShO2VOWXFYO_QCLcBGAsYHQ/w640-h344/3.png" />
+        </a>
         <p>Bước 7: Tải game.</p>
-        <img src="https://1.bp.blogspot.com/-FvZnr9x9jxA/YQo_VLOs6FI/AAAAAAAAAWQ/3UkOXYFSLacMAoxGkiT8vn5RtMJbBVzQwCLcBGAsYHQ/w640-h300/7.png" />
+        <a
+          target="_blank"
+          href="https://1.bp.blogspot.com/-FvZnr9x9jxA/YQo_VLOs6FI/AAAAAAAAAWQ/3UkOXYFSLacMAoxGkiT8vn5RtMJbBVzQwCLcBGAsYHQ/s1920/7.png"
+        >
+          <img src="https://1.bp.blogspot.com/-FvZnr9x9jxA/YQo_VLOs6FI/AAAAAAAAAWQ/3UkOXYFSLacMAoxGkiT8vn5RtMJbBVzQwCLcBGAsYHQ/w640-h300/7.png" />
+        </a>
 
         <h1 className="content__heading">
           2. Lưu ý sau khi tải game và các thắc mắc trên website
